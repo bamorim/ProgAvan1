@@ -30,11 +30,15 @@ public class ApoliceStorage {
     }
     
     public List<Apolice> getAllApolices(){
-        Collections.sort(apolices);
         return apolices;
+    }
+    
+    public void deleteAt(int line){
+        apolices.remove(line);
     }
     
     public void add(String id, Apolice.Status status){
         apolices.add(new Apolice(id, status));
+        Collections.sort(apolices);
     }
 }
